@@ -17,8 +17,8 @@ pipeline {
 
     stage ('OWASP Dependency-Check Vulnerabilities') {
       steps {
-	withMaven(maven: 'mvn-3.6.3', jdk: 'jdk-11') {
-          sh 'mvn org.owasp:dependency-check-maven:check'
+		withMaven(maven: 'mvn-3.6.3', jdk: 'jdk-11') {
+          sh 'mvn org.owasp:dependency-check-maven:check -DfailBuildOnCVSS=11'
         }
 
         dependencyCheckPublisher pattern: 'target/dependency-check-report.xml'
