@@ -74,7 +74,7 @@
             <plugin>
                 <groupId>org.owasp</groupId>
                 <artifactId>dependency-check-maven</artifactId>
-                <version>6.1.1</version>
+                <version>10.0.3</version>
                 <executions>
                     <execution>
                         <goals>
@@ -111,28 +111,7 @@
                     </execution>
                 </executions>
             </plugin>
-			<plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>findbugs-maven-plugin</artifactId>
-                <version>2.4.0</version>
-                <executions>
-                    <execution>
-                        <id>findbug</id>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <effort>Max</effort>
-                    <threshold>Low</threshold>
-                    <findbugsXmlOutputDirectory>
-                        ${project.build.directory}/findbugs
-                    </findbugsXmlOutputDirectory>
-                    <failOnError>false</failOnError>
-                </configuration>
-            </plugin>
+			
             <!-- static source code analysis -->
             <!-- checkstyle checks style. not security related coding errors, etc
             <plugin>
