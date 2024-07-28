@@ -218,7 +218,7 @@
             <plugin>
                 <groupId>org.sonarsource.scanner.maven</groupId>
                 <artifactId>sonar-maven-plugin</artifactId>
-                <version>3.8.0.2131</version>
+                <version>6.1.0.4477</version>
             </plugin>
             <!-- make container image -->
             <plugin>
@@ -243,6 +243,7 @@
                 </configuration>
             </plugin>
         </plugins>
+		
     </build>
 
     <reporting>
